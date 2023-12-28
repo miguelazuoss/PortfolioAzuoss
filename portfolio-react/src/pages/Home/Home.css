@@ -18,7 +18,6 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
-    
 }
 .textAboutMe h2{
     padding: 7.5vh;
@@ -114,92 +113,91 @@
     transform: scale(1.05); 
 }
   
-  .init-hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  }
-  
-  .visible {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.5s ease-in-out, transform -0.1s ease-in-out;
-  }
-
-  .textAboutMe, .ContainerAboutMe, .ContainerPhoto, .ContainerApre, body {
+.textAboutMe, .ContainerAboutMe, .ContainerPhoto, .ContainerApre, body {
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
-  @keyframes typing {
+@keyframes typing {
     from {
         width: 0;
     }
-  }
+}
 
   @keyframes blinking {
-    50% {
+      50% {
         border-color: white;
     }
   }
-
+  
   @keyframes gradientMove {
-    0% {
-        background-position-x: 0%;
+      0% {
+          background-position-x: 0%;
+        }
+        100% {
+            background-position-x: 400%;
+        }
     }
-    100% {
-        background-position-x: 400%;
+    
+    
+    @media (max-width: 768px) {
+        
+        .ContainerApre h2 span {
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .ContainerApre h2 span:hover {
+            transform: translateY(-0.0rem); /* Subir 0.5rem */
+        }
+        
+        .ContainerAboutMe {
+            font-size: 18px; 
+            height: auto;
+            padding: 20px;
     }
-}
-
-
-  @media (max-width: 768px) {
-
-    .ContainerApre h2 span {
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .ContainerApre h2 span:hover {
-        transform: translateY(-0.0rem); /* Subir 0.5rem */
-    }
-
-    .ContainerAboutMe {
-        font-size: 18px; 
-        height: auto;
-        padding: 20px;
-    }
-
+    
     .ContainerMain {
         height: auto;
     }
-
+    
     .ContainerPhoto {
         padding: 20px;
     }
-
+    
     .ContainerApre {
         height: auto;
     }
-
+    
     .ContainerApre p {
         font-size: 15px; 
     }
-
+    
     .ContainerApre h2 {
         font-size: 17px; 
     }
-
+    
     .background-img {
         display: none;
     }
     .backgroundInverse-img{
         display: none;
-      }
-
+    }
+    
     .ContainerImagem {
         width: 300px;
     }
-
+    
     .Photo-img {
         max-width: 130px;
     }
+}
+.init-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1.5s ease-in-out, transform 0.5s ease-in-out;
 }
